@@ -14,10 +14,9 @@ public class Tournament {
     private String id;
     private String name;
     private String gameId;
-    @DateTimeFormat(pattern = "yyyy/mm/dd")
-    private Date startDate;
-    @DateTimeFormat(pattern = "yyyy/mm/dd")
-    private Date endDate;
+    private String[] teams;
+    private String imageUrl;
+    private String description;
 
     public String getId() {
         return id;
@@ -43,19 +42,27 @@ public class Tournament {
         this.gameId = gameId;
     }
 
-    public Date getStartDate() {
-        return startDate;
+    public String[] getTeams() {
+        return teams;
     }
 
-    public void setStartDate(Date startDate) {
-        this.startDate = startDate;
+    public void setTeams(String[] teams) {
+        this.teams = teams;
     }
 
-    public Date getEndDate() {
-        return endDate;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setEndDate(Date endDate) {
-        this.endDate = endDate;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
